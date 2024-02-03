@@ -70,9 +70,10 @@ Microcode: ``CO MI / RO MI / +O RI +S / CI``
 
 ## Logic
 
-``00010101 NOTB`` - Logic NOT on register B<br/>
-``00100100 XOR`` - Logic A XOR B<br/>
-``01000100 AND`` - Logic A AND B<br/>
+``00011000 NOTB`` - Logic NOT on register B<br/>
+``00101000 XOR`` - Logic A XOR B<br/>
+``01001000 AND`` - Logic A AND B<br/>
+Microcode: ``CO MI / RO MI / AND || XOR || NOTB RI / CI ``
 
 ## Branching
 
@@ -83,10 +84,10 @@ Microcode: ``CO MI / RO J / CI``
 ## Port-mapped operations
 
 ``00000110 OUTA`` - Output from register A to port<br/>
-Microcode: ``AO DI``
+Microcode: ``AO DI / CI``
 
 ``00000111 OUTB`` - Output from register A to port<br/>
-Microcode: ``BO DI``
+Microcode: ``BO DI / CI``
 
 # Control lines
 
