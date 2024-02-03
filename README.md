@@ -46,13 +46,13 @@ All opcodes are prefixed with the following microcode:
 Microcode: ``CO MI / RO MI / RO AI / CI``
 
 ``10000000 LDAI val`` - Load A immediate<br/>
-Microcode: ``CO AI / RO AI / CI``
+Microcode: ``CO MI / RO AI / CI``
 
 ``00000001 LDB addr`` - Load B from memory<br/>
 Microcode: ``CO MI / RO MI / RO BI / CI``
 
 ``10000001 LDBI val`` - Load B immediate<br/>
-Microcode: ``CO BI / RO BI / CI``
+Microcode: ``CO MI / RO BI / CI``
 
 ``00000010 STA addr`` - Store A to memory<br/>
 Microcode: ``CO MI / RO MI / AO RI / CI``
@@ -70,9 +70,10 @@ Microcode: ``CO MI / RO MI / +O RI +S / CI``
 
 ## Logic
 
-``00010101 NOTB`` - Logic NOT on register B<br/>
-``00100100 XOR`` - Logic A XOR B<br/>
-``01000100 AND`` - Logic A AND B<br/>
+``00011000 NOTB`` - Logic NOT on register B<br/>
+``00101000 XOR`` - Logic A XOR B<br/>
+``01001000 AND`` - Logic A AND B<br/>
+Microcode: ``CO MI / RO MI / AND || XOR || NOTB RI / CI ``
 
 ## Branching
 
@@ -83,10 +84,10 @@ Microcode: ``CO MI / RO J / CI``
 ## Port-mapped operations
 
 ``00000110 OUTA`` - Output from register A to port<br/>
-Microcode: ``AO DI``
+Microcode: ``AO DI / CI``
 
 ``00000111 OUTB`` - Output from register A to port<br/>
-Microcode: ``BO DI``
+Microcode: ``BO DI / CI``
 
 # Control lines
 

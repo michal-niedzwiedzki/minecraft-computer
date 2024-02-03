@@ -1,0 +1,17 @@
+; Minecraft ram code for easier building
+
+00 LDAI
+01 0
+02 LDBI
+03 1
+04 ADD
+05 #0111
+06 LDA 
+07 #0111
+08 OUTA
+09 JMP
+10 03
+
+
+
+15 ; ADD command output (#0111)
