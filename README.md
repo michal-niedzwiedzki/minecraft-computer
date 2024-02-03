@@ -46,13 +46,13 @@ All opcodes are prefixed with the following microcode:
 Microcode: ``CO MI / RO MI / RO AI / CI``
 
 ``10000000 LDAI val`` - Load A immediate<br/>
-Microcode: ``CO AI / RO AI / CI``
+Microcode: ``CO MI / RO AI / CI``
 
 ``00000001 LDB addr`` - Load B from memory<br/>
 Microcode: ``CO MI / RO MI / RO BI / CI``
 
 ``10000001 LDBI val`` - Load B immediate<br/>
-Microcode: ``CO BI / RO BI / CI``
+Microcode: ``CO MI / RO BI / CI``
 
 ``00000010 STA addr`` - Store A to memory<br/>
 Microcode: ``CO MI / RO MI / AO RI / CI``
